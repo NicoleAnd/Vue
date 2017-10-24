@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>Vue 绑定DOM元素属性</title>
+    <script src="https://cdn.bootcss.com/vue/2.4.2/vue.min.js"></script>
+</head>
+
+<body>
+    <div id="app-2">
+        <span v-bind:title="message">鼠标悬停几秒动态显示信息</span>
+    </div>
+    <script>
+    new Vue({
+        el: '#app-2',
+        data: {
+            message: '页面加载于' + new Date().toLocaleString()
+        }
+    })
+    </script>
+</body>
+
+</html>
